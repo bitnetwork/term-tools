@@ -1,0 +1,26 @@
+{
+  "name": "term-tools",
+  "version": "1.0.0",
+  "description": "A terminal compatibility library for interacting with the terminal emulator.",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitnetwork/term-tools.git"
+  },
+  "keywords": [
+    "terminal",
+    "ansi"
+  ],
+  "author": "Bit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitnetwork/term-tools/issues"
+  },
+  "homepage": "https://github.com/bitnetwork/term-tools#readme"
+}
