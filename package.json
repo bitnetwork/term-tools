@@ -2,7 +2,7 @@
   "name": "term-tools",
   "version": "1.0.0",
   "description": "A terminal compatibility library for interacting with the terminal emulator.",
-  "main": "./lib/index.js",
+  "main": "./lib/main.js",
   "directories": {
     "lib": "lib"
   },
