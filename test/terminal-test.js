@@ -1,14 +1,13 @@
 const Terminal = require("..").Terminal;
 
-let term = new Terminal();
+let term = new Terminal({terminal: process.argv[2]});
 
+console.log(process.argv[2]);
 // term.write(`${term.changeScreen()}Testing terminal module...\n\
 // ${term.cursorVisible(false)}Cursor now invisible.\n\
 // ${term.moveRelative(0, -5)}Now moved 5 lines up.`);
 
-if (process.argv.length <= 2) {
-  term.open();
-}
+term.open();
 
 term.on("key", function(value, mapping) {
   let output = "";
