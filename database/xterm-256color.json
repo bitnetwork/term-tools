@@ -5,11 +5,12 @@
   "lines": 24,
   "colors": 256,
   "truecolor": true,
+  "unicode": false,
 
   "bell": "\b",
   "clear": "\u001b[H\u001b[2J",
   "clearLine": "\u001b[G\u001b[2K",
-  "reset": "\u001bc\u001b[\u0021p\u001b[?3;4l\u001b[4l\u001b>",
+  "reset": "\u001bc\u001b[!p\u001b?3;4l\u001b[4l\u001b>\u001b[m"
   "enterAlternateBuffer": "\u001b[?1049h",
   "exitAlternateBuffer": "\u001b[?1049l",
   "enterKeypad": "\u001b[?1h\u001b=",
@@ -25,6 +26,19 @@
 
   "showCursor": "\u001b[?25h",
   "hideCursor": "\u001b[?25l",
+  "alternateCharset": {
+    "\u2518": "j",
+    "\u2510": "k",
+    "\u250c": "l",
+    "\u2514": "m",
+    "\u253c": "n",
+    "\u2500": "q",
+    "\u251c": "t",
+    "\u2524": "u",
+    "\u2534": "v",
+    "\u252c": "w",
+    "\u2502": "x"
+  },
   "changeScrollRegion": "",
 
   "moveCursor": "\u001b[%i%p1%d;%p2%dH",
@@ -57,14 +71,14 @@
   "exitStrikethrough": "\u001b[29m",
   "resetAttribute": "\u001b(B\u001b[m",
 
-  "setForeground": "",
-  "setBackground": "",
-  "setForegroundClear": "",
-  "setBackgroundClear": "",
-  "setForegroundTrue": "",
-  "setBackgroundTrue": "",
-  "setPair": "",
-  "resetColor": "",
+  "setForeground": "\x1b[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m",
+  "setBackground": "\x1b[%?%p1%{8}%<%t4%p1%d%e%p1%{16}%<%t10%p1%{8}%-%d%e48;5;%p1%d%;m",
+  "setForegroundClear": "\x1b[39m",
+  "setBackgroundClear": "\x1b[49m",
+  "setForegroundTrue": "\x1b[38;2;%p1%d;%p2%d;%p3%dm",
+  "setBackgroundTrue": "\x1b[48;2;%p1%d;%p2%d;%p3%dm",
+  "setPair": "\x1b]4;%p1%d;rgb:%p2%X/%p3%X/%p4%X\x1b\\",
+  "resetColor": "\u001b]104\u001b\\",
 
   "enterMouse": "",
   "exitMouse": "",
