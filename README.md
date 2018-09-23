@@ -1,18 +1,22 @@
-# Term-Tools
-A package for controlling the terminal.
+# term-tools
+A package for controlling the terminal via escape sequences.
 
 ## Features
-### Terminfo
-- [x] Basic parsing
-- [x] Parameterized string parsing
-- [ ] Extended capabilities
+### Database
+- [x] Cursor position support
+- [x] Text attribute support
+- [x] Color support
+- [x] Key support
+- [x] Full capability support
+- [ ] Common terminals supported
+- [ ] Full terminal support
 
 ### Terminal
-- [x] Cursor manipulation
-- [x] Keycode abstraction
+- [x] Cursor position manipulation
+- [ ] Key press events
 - [x] Alternate screen switching
 - [x] Text attributes
 - [x] Status bar & bells
-- [x] 8/16/256/true color (true color is the same as 256 bit color)
+- [x] Color
 - [ ] Scrolling events
 - [ ] Mouse click event
