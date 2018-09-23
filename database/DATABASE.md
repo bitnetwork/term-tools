@@ -174,7 +174,7 @@ setBackgroundClear    |                   | Terminfo has no support
 setForegroundTrue     |                   | Terminfo has no support; paramatized (r, g, b)
 setBackgroundTrue     |                   | Terminfo has no support; paramatized (r, g, b)
 setPair               | initc             | Paramatized (id, r, g, b); color values range from 0-1000 in terminfo, change to 0-255
-resetColor            | oc                | Also do set*groundClear
+resetColor            | oc                | 
 --------------------- | ----------------- | ------------------------------------------
 enterMouse            | XM(1)             | Terminfo lacking support; default to xterm; new entry paramatized (type); type = 0: click, 1: click+drag, 2: click+drag+move
 exitMouse             | XM(0)             | Terminfo lacking support; default to xterm
@@ -298,4 +298,3 @@ keyMetaF9             |                   | Keystroke; sent by terminal
 keyMetaF1             |                   | Keystroke; sent by terminal
 keyMetaF1             |                   | Keystroke; sent by terminal
 keyMetaF1             |                   | Keystroke; sent by terminal
---------------------- | ----------------- | ------------------------------------------
