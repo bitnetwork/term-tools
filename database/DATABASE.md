@@ -282,9 +282,9 @@ keyCtrlF6             |                   | Keystroke; sent by terminal
 keyCtrlF7             |                   | Keystroke; sent by terminal
 keyCtrlF8             |                   | Keystroke; sent by terminal
 keyCtrlF9             |                   | Keystroke; sent by terminal
-keyCtrlF1             |                   | Keystroke; sent by terminal
-keyCtrlF1             |                   | Keystroke; sent by terminal
-keyCtrlF1             |                   | Keystroke; sent by terminal
+keyCtrlF10            |                   | Keystroke; sent by terminal
+keyCtrlF11            |                   | Keystroke; sent by terminal
+keyCtrlF12            |                   | Keystroke; sent by terminal
 --------------------- | ----------------- | ------------------------------------------
 keyMetaF1             |                   | Keystroke; sent by terminal
 keyMetaF2             |                   | Keystroke; sent by terminal
@@ -295,6 +295,6 @@ keyMetaF6             |                   | Keystroke; sent by terminal
 keyMetaF7             |                   | Keystroke; sent by terminal
 keyMetaF8             |                   | Keystroke; sent by terminal
 keyMetaF9             |                   | Keystroke; sent by terminal
-keyMetaF1             |                   | Keystroke; sent by terminal
-keyMetaF1             |                   | Keystroke; sent by terminal
-keyMetaF1             |                   | Keystroke; sent by terminal
+keyMetaF10            |                   | Keystroke; sent by terminal
+keyMetaF11            |                   | Keystroke; sent by terminal
+keyMetaF12            |                   | Keystroke; sent by terminal
