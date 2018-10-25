@@ -117,7 +117,7 @@ truecolor             |                   |
 bell                  | bel               |
 clear                 | clear             | Also moves cursor to (0, 0); \x1b[3J will also clear the scrollback buffer, terminfo does this
 clearLine             | clr_bol + clr_eol | Also moves cursor to column 0; \x1b[2K will clear the entire line, terminfo doesn't use this
-reset                 | reset_*string     | Good idea to also add resetColor + resetAttribute + setCursorStyle(0, 1)
+reset                 | reset_*string     | Good idea to also add resetColor + resetAttribute + setCursorStyle(0, 1) + resetCursorColor
 enterAlternateBuffer  | smcup             | 
 exitAlternateBuffer   | rmcup             | 
 enterKeypad           | smkx              | Required to get correct key inputs
@@ -146,6 +146,8 @@ reportCursor          |                   | Sent by terminal; Paramatized (row, 
 showCursor            | cnorm             |
 hideCursor            | civis             |
 setCursorStyle        |                   | Paramatized (style 0-3 (block, underline, I bar), steady)
+setCursorColor        |                   | Paramatized (rgb truecolor)
+resetCursorColor      |                   | 
 alternateCharset      | acsc              | This is a object mapping a unicode character to a character used after switching charsets
 changeScrollRegion    | csr               | Paramatized (line1, line2)
 --------------------- | ----------------- | ------------------------------------------
@@ -169,12 +171,12 @@ resetAttribute        | sgr0              |
 --------------------- | ----------------- | ------------------------------------------
 setForeground         | setaf or setf     | Paramatized (id)
 setBackground         | setab or setb     | Paramatized (id)
-setForegroundClear    |                   | Terminfo has no support
-setBackgroundClear    |                   | Terminfo has no support
+resetForeground       |                   | Terminfo has no support
+resetBackground       |                   | Terminfo has no support
 setForegroundTrue     |                   | Terminfo has no support; paramatized (r, g, b)
 setBackgroundTrue     |                   | Terminfo has no support; paramatized (r, g, b)
 setPair               | initc             | Paramatized (id, r, g, b); color values range from 0-1000 in terminfo, change to 0-255
-resetColor            | oc                | 
+resetColor            | oc                | Reset all pairs to the default color table
 --------------------- | ----------------- | ------------------------------------------
 enterMouse            | XM(1)             | Terminfo lacking support; default to xterm; new entry paramatized (type); type = 0: click, 1: click+drag, 2: click+drag+move
 exitMouse             | XM(0)             | Terminfo lacking support; default to xterm

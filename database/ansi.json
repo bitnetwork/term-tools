@@ -39,6 +39,7 @@
   "showCursor": "",
   "hideCursor": "",
   "setCursorStyle": "",
+  "setCursorColor": "",
   "alternateCharset": {},
   "changeScrollRegion": "",
 
@@ -62,8 +63,8 @@
 
   "setForeground": "\u001b[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m",
   "setBackground": "\u001b[%?%p1%{8}%<%t4%p1%d%e%p1%{16}%<%t10%p1%{8}%-%d%e48;5;%p1%d%;m",
-  "setForegroundClear": "\u001b[39m",
-  "setBackgroundClear": "\u001b[49m",
+  "resetForeground": "\u001b[39m",
+  "resetBackground": "\u001b[49m",
   "setForegroundTrue": "",
   "setBackgroundTrue": "",
   "setPair": "",

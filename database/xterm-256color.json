@@ -10,7 +10,7 @@
   "bell": "\b",
   "clear": "\u001b[H\u001b[2J",
   "clearLine": "\u001b[G\u001b[2K",
-  "reset": "\u001bc\u001b[!p\u001b[?3;4l\u001b[4l\u001b>\u001b[m\u001b]104\u001b\\\u001b[1 q",
+  "reset": "\u001bc\u001b[!p\u001b[?3;4l\u001b[4l\u001b>\u001b[m\u001b]104\u001b\\\u001b[1 q\u001b]112",
   "enterAlternateBuffer": "\u001b[?1049h",
   "exitAlternateBuffer": "\u001b[?1049l",
   "enterKeypad": "\u001b[?1h\u001b=",
@@ -39,6 +39,8 @@
   "showCursor": "\u001b[?25h",
   "hideCursor": "\u001b[?25l",
   "setCursorStyle": "\u001b[%p1%{2}%*%{1}%+%p2%+%d q",
+  "setCursorColor": "\u001b]12;#%p1%.2x%p2%.2x%p3%.2x\u0007",
+  "resetCursorColor" : "\u001b]112",
   "alternateCharset": {
     "\u2518": "j",
     "\u2510": "k",
@@ -74,8 +76,8 @@
 
   "setForeground": "\u001b[%?%p1%{8}%<%t3%p1%d%e%p1%{16}%<%t9%p1%{8}%-%d%e38;5;%p1%d%;m",
   "setBackground": "\u001b[%?%p1%{8}%<%t4%p1%d%e%p1%{16}%<%t10%p1%{8}%-%d%e48;5;%p1%d%;m",
-  "setForegroundClear": "\u001b[39m",
-  "setBackgroundClear": "\u001b[49m",
+  "resetForeground": "\u001b[39m",
+  "resetBackground": "\u001b[49m",
   "setForegroundTrue": "\u001b[38;2;%p1%d;%p2%d;%p3%dm",
   "setBackgroundTrue": "\u001b[48;2;%p1%d;%p2%d;%p3%dm",
   "setPair": "\u001b]4;%p1%d;rgb:%p2%X/%p3%X/%p4%X\u001b\\",
