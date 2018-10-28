@@ -130,6 +130,7 @@ enterPaste            |                   | Bracketed paste mode; not supported 
 exitPaste             |                   |
 beginPaste            |                   | Sent by terminal on paste begin
 endPaste              |                   | Sent by terminal on paste end
+alternateCharset      | acsc              | This is a object mapping a unicode character to a character used after switching charsets
 --------------------- | ----------------- | ------------------------------------------
 moveCursor            | cup               | Paramatized (col, row); zero based
 moveColumn            | hpa               | Paramatized (col); zero based; terminfo lacking support
@@ -138,6 +139,9 @@ cursorUp              | cuu               | Paramatized (amount)
 cursorDown            | cud               | Paramatized (amount)
 cursorRight           | cuf               | Paramatized (amount)
 cursorLeft            | cub               | Paramatized (amount)
+scrollUp              | sf                | Paramatized (amount); new lines inserted at bottom
+scrollDown            | sr                | Paramatized (amount); new lines inserted at top
+setScrollRegion       | csr               | Paramatized (line1, line2)
 saveCursor            | sc                | 
 restoreCursor         | rc                | 
 requestCursor         | reqmp             | Terminfo lacking support
@@ -148,8 +152,6 @@ hideCursor            | civis             |
 setCursorStyle        |                   | Paramatized (style 0-3 (block, underline, I bar), steady)
 setCursorColor        |                   | Paramatized (rgb truecolor)
 resetCursorColor      |                   | 
-alternateCharset      | acsc              | This is a object mapping a unicode character to a character used after switching charsets
-changeScrollRegion    | csr               | Paramatized (line1, line2)
 --------------------- | ----------------- | ------------------------------------------
 enterBold             | bold              | 
 exitBold              |                   | The standard ansi code doesn't work on xterm and putty, so exit both bold and dim
@@ -175,12 +177,12 @@ resetForeground       |                   | Terminfo has no support
 resetBackground       |                   | Terminfo has no support
 setForegroundTrue     |                   | Terminfo has no support; paramatized (r, g, b)
 setBackgroundTrue     |                   | Terminfo has no support; paramatized (r, g, b)
-setPair               | initc             | Paramatized (id, r, g, b); color values range from 0-1000 in terminfo, change to 0-255
+setColor              | initc             | Paramatized (id, r, g, b); color values range from 0-1000 in terminfo, change to 0-255
 resetColor            | oc                | Reset all pairs to the default color table
 --------------------- | ----------------- | ------------------------------------------
 enterMouse            | XM(1)             | Terminfo lacking support; default to xterm; new entry paramatized (type); type = 0: click, 1: click+drag, 2: click+drag+move
 exitMouse             | XM(0)             | Terminfo lacking support; default to xterm
-keyMouse              | kmous             | Sent by terminal; terminfo broken support; paramatized (button, row, col, pressed); button is a bitmask of (scroll wheel, unused, control, meta, shift, if set button3, if set button2/wheeldown else button1/wheelup)
+keyMouse              | kmous             | Sent by terminal; terminfo broken support; default to xterm; paramatized (button, row, col, pressed); button is a bitmask of (scroll wheel, unused, control, meta, shift, if set button3, if set button2/wheeldown else button1/wheelup)
 --------------------- | ----------------- | ------------------------------------------
 keyUp                 | kcuu1             | Keystroke; sent by terminal
 keyDown               | kcud1             | Keystroke; sent by terminal
@@ -190,6 +192,7 @@ keyReturn             | cr                | Keystroke; sent by terminal
 keyBackspace          | kbs               | Keystroke; sent by terminal; usually both 127 and ^H
 keyDelete             | kdch1             | Keystroke; sent by terminal
 keyTab                | ht                | Keystroke; sent by terminal
+keyEscape             |                   | Keystroke; sent by terminal; should always be \x1b
 keyInsert             | kich1             | Keystroke; sent by terminal
 keyHome               | khome             | Keystroke; sent by terminal
 keyEnd                | kend              | Keystroke; sent by terminal

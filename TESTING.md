@@ -17,7 +17,7 @@ List of features to be supported.
 - [ ] Mouse
 
 ## Terminals
-This should be a list of terminal that need to be supported.
+A list of terminals that need to be supported.
 
 - [ ] Eterm
 - [ ] Eterm-256color
@@ -51,7 +51,7 @@ This should be a list of terminal that need to be supported.
 - [ ] xterm-color
 
 ## Optional Terminals
-A pratical list of terminal which might be worth supporting.
+A pratical list of terminals which might be worth supporting.
 
 - [ ] Eterm
 - [ ] Eterm-256color

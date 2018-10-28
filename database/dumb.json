@@ -1,5 +1,5 @@
 {
-  "description": "dumb 80 column dumb terminal",
+  "description": "dumb 80 column terminal",
 
   "columns": 80,
   "lines": 24,
@@ -7,7 +7,7 @@
   "truecolor": false,
   "unicode": false,
 
-  "bell": "\b",
+  "bell": "",
   "clear": "",
   "clearLine": "",
   "reset": "",
@@ -23,6 +23,7 @@
   "exitPaste": "",
   "beginPaste": "",
   "endPaste": "",
+  "alternateCharset": {},
 
   "moveCursor": "",
   "moveColumn": "",
@@ -31,6 +32,9 @@
   "cursorDown": "",
   "cursorRight": "",
   "cursorLeft": "",
+  "scrollUp": "",
+  "scrollDown": "",
+  "setScrollRegion": "",
   "saveCursor": "",
   "restoreCursor": "",
   "requestCursor": "",
@@ -39,8 +43,8 @@
   "showCursor": "",
   "hideCursor": "",
   "setCursorStyle": "",
-  "alternateCharset": {},
-  "changeScrollRegion": "",
+  "setCursorColor": "",
+  "resetCursorColor" : "",
 
   "enterBold": "",
   "exitBold": "",
@@ -62,11 +66,11 @@
 
   "setForeground": "",
   "setBackground": "",
-  "setForegroundClear": "",
-  "setBackgroundClear": "",
+  "resetForeground": "",
+  "resetBackground": "",
   "setForegroundTrue": "",
   "setBackgroundTrue": "",
-  "setPair": "",
+  "setColor": "",
   "resetColor": "",
 
   "enterMouse": "",
@@ -81,6 +85,7 @@
   "keyBackspace": "",
   "keyDelete": "",
   "keyTab": "",
+  "keyEscape": "",
   "keyInsert": "",
   "keyHome": "",
   "keyEnd": "",
@@ -98,6 +103,7 @@
   "keyCtrlDown": "",
   "keyCtrlRight": "",
   "keyCtrlLeft": "",
+  "keyCtrlReturn": "",
   "keyCtrlBackspace": "",
   "keyCtrlDelete": "",
   "keyCtrlInsert": "",
