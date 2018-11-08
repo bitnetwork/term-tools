@@ -117,6 +117,8 @@ truecolor             |                   |
 bell                  | bel               |
 clear                 | clear             | Also moves cursor to (0, 0); \x1b[3J will also clear the scrollback buffer, terminfo does this
 clearLine             | clr_bol + clr_eol | Also moves cursor to column 0; \x1b[2K will clear the entire line, terminfo doesn't use this
+insertLine            | il                | Paramatized (amount)
+deleteLine            | dl                | Paramatized (amount)
 reset                 | reset_*string     | Good idea to also add resetColor + resetAttribute + setCursorStyle(0, 1) + resetCursorColor
 enterAlternateBuffer  | smcup             | 
 exitAlternateBuffer   | rmcup             | 
@@ -130,6 +132,7 @@ enterPaste            |                   | Bracketed paste mode; not supported 
 exitPaste             |                   |
 beginPaste            |                   | Sent by terminal on paste begin
 endPaste              |                   | Sent by terminal on paste end
+setScrollRegion       | csr               | Paramatized (line1, line2)
 alternateCharset      | acsc              | This is a object mapping a unicode character to a character used after switching charsets
 --------------------- | ----------------- | ------------------------------------------
 moveCursor            | cup               | Paramatized (col, row); zero based
@@ -141,7 +144,6 @@ cursorRight           | cuf               | Paramatized (amount)
 cursorLeft            | cub               | Paramatized (amount)
 scrollUp              | sf                | Paramatized (amount); new lines inserted at bottom
 scrollDown            | sr                | Paramatized (amount); new lines inserted at top
-setScrollRegion       | csr               | Paramatized (line1, line2)
 saveCursor            | sc                | 
 restoreCursor         | rc                | 
 requestCursor         | reqmp             | Terminfo lacking support
